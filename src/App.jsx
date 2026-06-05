@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import HomePage from './components/HomePage'
 import LoginPage from './components/LoginPage'
@@ -8,7 +8,13 @@ import { initialState } from './data/initialData'
 
 export default function App() {
   const [page, setPage] = useState('home')
-  const [state, setState] = useState(initialState)
+  const [state, setState] = useState(() => {
+  const saved = localStorage.getItem('meevent-data')
+  return saved ? JSON.parse(saved) : initialState
+})
+useEffect(() => {
+  localStorage.setItem('meevent-data', JSON.stringify(state))
+}, [state])
   const [toast, setToast] = useState('')
 
   const showToast = useCallback((msg) => setToast(msg), [])
