@@ -46,10 +46,6 @@ export default function HomePage({ products, cats, onNavigate }) {
           <div className="stat-num">500+</div>
           <div className="stat-label">งานที่ผ่านมา</div>
         </div>
-        <div className="stat-item">
-          <div className="stat-num">★ 4.9</div>
-          <div className="stat-label">คะแนนรีวิว</div>
-        </div>
       </div>
 
       {/* Products */}
