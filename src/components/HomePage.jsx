@@ -23,9 +23,12 @@ export default function HomePage({ products, cats, onNavigate }) {
           >
             <i className="ti ti-search" aria-hidden="true"></i> ดูสินค้าทั้งหมด
           </button>
-          <button className="btn-outline">
-            <i className="ti ti-phone" aria-hidden="true"></i> ติดต่อเรา
-          </button>
+          
+            <a href="https://www.facebook.com/MEevent0953545055" class="btn-outline" target="_blank">
+  <i class="ti ti-phone" aria-hidden="true"></i> ติดต่อเรา
+</a>
+
+        
         </div>
       </div>
 
